@@ -37,7 +37,7 @@ const Comment = ({ comment, onAdd }) => {
               onChange={(event) => setInput(event.target.value)}
             />
 
-            <div className="btn-container">
+            <div className="comment-reply-actions">
               <button onClick={addComment}>Reply</button>
               <button onClick={() => setShowInput(false)}>Cancel</button>
             </div>

@@ -11,6 +11,7 @@ const addComment = (list, commentId, newComment) => {
 
   findAndAdd(list);
 
+  // deep copy of list
   return JSON.parse(JSON.stringify(list));
 };
 
