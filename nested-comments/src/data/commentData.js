@@ -1,23 +1,23 @@
 export const commentData = [
   {
     id: "1",
-    text: "Hello world! How are you?",
+    text: "I just watched an amazing movie last night!",
     replies: [
       {
         id: "2",
-        text: "Hey, I am fine, wau?",
+        text: "Oh, that sounds interesting! What movie was it?",
         replies: [
           {
             id: "3",
-            text: "Hello, I am food, How are you?",
+            text: "It was 'Inception'! Have you seen it?",
             replies: [
               {
                 id: "4",
-                text: "Life sucks man!",
+                text: "Yes, I have! It's mind-bending, isn't it?",
                 replies: [
                   {
                     id: "5",
-                    text: "Haha, I can relate :)",
+                    text: "Absolutely! The ending always leaves me wondering.",
                     replies: [],
                   },
                 ],
@@ -30,23 +30,23 @@ export const commentData = [
   },
   {
     id: "11",
-    text: "Hello world! How are you?",
+    text: "Just got back from a hiking trip in the mountains!",
     replies: [
       {
         id: "21",
-        text: "Hey, I am fine, wau?",
+        text: "Wow, that must have been an adventure! Tell me more!",
         replies: [
           {
             id: "31",
-            text: "Hello, I am food, How are you?",
+            text: "It was breathtaking! The views were spectacular.",
             replies: [
               {
                 id: "41",
-                text: "Life sucks man!",
+                text: "I'd love to go hiking there someday.",
                 replies: [
                   {
                     id: "51",
-                    text: "Haha, I can relate :)",
+                    text: "You should! It's an experience like no other.",
                     replies: [],
                   },
                 ],
