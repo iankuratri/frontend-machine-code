@@ -47,7 +47,7 @@ const Comment = ({ comment, onAdd }) => {
 
       {comment.replies.map((comment) => (
         <div className="comment-reply" key={comment.id}>
-          <Comment comment={comment} />
+          <Comment comment={comment} onAdd={onAdd} />
         </div>
       ))}
     </>
