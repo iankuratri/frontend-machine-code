@@ -1,0 +1,10 @@
+.comment-container {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.child-comment {
+  margin-left: 20px;
+}

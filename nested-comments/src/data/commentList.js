@@ -1,4 +1,4 @@
-export const commentData = [
+export const commentList = [
   {
     id: "1",
     text: "I just watched an amazing movie last night!",
