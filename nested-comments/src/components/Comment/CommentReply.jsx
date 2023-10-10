@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
-import "./reply.css";
+import "./comment.css";
 
-const Reply = ({ onAddComment, onShowInput }) => {
+const CommentReply = ({ onAddComment, onShowInput }) => {
   const [comment, setComment] = useState("");
 
   const handleReply = useCallback(() => {
@@ -31,4 +31,4 @@ const Reply = ({ onAddComment, onShowInput }) => {
   );
 };
 
-export default React.memo(Reply);
+export default React.memo(CommentReply);

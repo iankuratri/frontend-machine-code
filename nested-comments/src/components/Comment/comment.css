@@ -8,3 +8,14 @@
 .child-comment {
   margin-left: 20px;
 }
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.reply-actions {
+  display: flex;
+  gap: 10px;
+}

@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import Reply from "../Reply/Reply";
+import Reply from "./CommentReply";
 
 const CommentAction = ({ onAddComment }) => {
   const [showInput, setShowInput] = useState(false);

@@ -1,5 +1,5 @@
 import "./App.css";
-import Comment from "./components/Comment/Comment";
+import CommentContainer from "./components/Comment/CommentContainer";
 import { commentList as initialComments } from "./data/commentList";
 import useComment from "./hooks/useComment";
 
@@ -11,7 +11,7 @@ function App() {
       <h1>Nested Comments</h1>
 
       {commentList.map((comment) => (
-        <Comment
+        <CommentContainer
           key={comment.id}
           comment={comment}
           onAddComment={addNewComment}

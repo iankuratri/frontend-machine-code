@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
-import CommentAction from "../CommentAction/CommentAction";
+import CommentAction from "./CommentAction";
 import "./comment.css";
 
-const Comment = ({ comment, onAddComment }) => {
+const CommentContainer = ({ comment, onAddComment }) => {
   const addComment = useCallback(
     (value) => {
       const newComment = {
@@ -26,11 +26,11 @@ const Comment = ({ comment, onAddComment }) => {
 
       {comment.replies.map((comment) => (
         <div className="child-comment" key={comment.id}>
-          <Comment comment={comment} onAddComment={onAddComment} />
+          <CommentContainer comment={comment} onAddComment={onAddComment} />
         </div>
       ))}
     </>
   );
 };
 
-export default React.memo(Comment);
+export default React.memo(CommentContainer);
