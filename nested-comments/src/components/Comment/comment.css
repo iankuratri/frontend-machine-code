@@ -5,8 +5,18 @@
   margin-bottom: 20px;
 }
 
+.child-comment::before {
+  content: "-------";
+  position: relative;
+  left: -39px;
+  top: 40px;
+}
+
 .child-comment {
   margin-left: 20px;
+  padding-left: 40px;
+
+  border-left: 1px solid grey;
 }
 
 input {
