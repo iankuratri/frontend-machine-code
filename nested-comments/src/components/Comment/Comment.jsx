@@ -1,36 +1,27 @@
-import React, { useState } from "react";
-import Reply from "../Reply/Reply";
+import React, { useCallback } from "react";
+import CommentAction from "../CommentAction/CommentAction";
 import "./comment.css";
 
 const Comment = ({ comment, onAddComment }) => {
-  console.count("commentRendered");
+  const addComment = useCallback(
+    (value) => {
+      const newComment = {
+        id: Date.now(),
+        text: value,
+        replies: [],
+      };
 
-  const [showInput, setShowInput] = useState(false);
-
-  const addComment = (value) => {
-    const newComment = {
-      id: Date.now(),
-      text: value,
-      replies: [],
-    };
-
-    onAddComment(comment.id, newComment);
-
-    setShowInput(false);
-  };
+      onAddComment(comment.id, newComment);
+    },
+    [comment, onAddComment]
+  );
 
   return (
     <>
       <div className="comment-container">
         <p>{comment.text}</p>
 
-        {!showInput ? (
-          <div>
-            <button onClick={() => setShowInput(true)}>Add Reply</button>
-          </div>
-        ) : (
-          <Reply onAddComment={addComment} onShowInput={setShowInput} />
-        )}
+        <CommentAction onAddComment={addComment} />
       </div>
 
       {comment.replies.map((comment) => (

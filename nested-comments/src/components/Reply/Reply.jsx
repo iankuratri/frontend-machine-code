@@ -1,17 +1,17 @@
-import { useState } from "react";
+import React, { useCallback, useState } from "react";
 import "./reply.css";
 
 const Reply = ({ onAddComment, onShowInput }) => {
   const [comment, setComment] = useState("");
 
-  const handleReply = () => {
+  const handleReply = useCallback(() => {
     const value = comment.trim();
 
     if (!value) return;
 
     onAddComment(value);
     setComment("");
-  };
+  }, [comment, onAddComment]);
 
   return (
     <>
@@ -31,4 +31,4 @@ const Reply = ({ onAddComment, onShowInput }) => {
   );
 };
 
-export default Reply;
+export default React.memo(Reply);
