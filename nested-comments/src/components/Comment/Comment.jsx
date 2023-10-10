@@ -3,6 +3,8 @@ import Reply from "../Reply/Reply";
 import "./comment.css";
 
 const Comment = ({ comment, onAddComment }) => {
+  console.count("commentRendered");
+
   const [showInput, setShowInput] = useState(false);
 
   const addComment = (value) => {

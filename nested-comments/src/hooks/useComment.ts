@@ -25,6 +25,8 @@ const useComment = (initialComments = []) => {
     [commentList]
   );
 
+  // const deleteComment = useCallback(() => {}, [commentList]);
+
   return { commentList, addNewComment };
 };
 
