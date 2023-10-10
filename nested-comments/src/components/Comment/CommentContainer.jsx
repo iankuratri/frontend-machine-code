@@ -3,6 +3,8 @@ import CommentAction from "./CommentAction";
 import "./comment.css";
 
 const CommentContainer = ({ comment, onAddComment }) => {
+  const { id, text, replies = [] } = comment;
+
   const addComment = useCallback(
     (value) => {
       const newComment = {
@@ -11,21 +13,21 @@ const CommentContainer = ({ comment, onAddComment }) => {
         replies: [],
       };
 
-      onAddComment(comment.id, newComment);
+      onAddComment(id, newComment);
     },
-    [comment, onAddComment]
+    [id, onAddComment]
   );
 
   return (
     <>
       <div className="comment-container">
-        <p>{comment.text}</p>
+        <p>{text}</p>
 
         <CommentAction onAddComment={addComment} />
       </div>
 
-      {comment.replies.map((comment) => (
-        <div className="child-comment" key={comment.id}>
+      {replies.map((comment) => (
+        <div className="child-comment" key={id}>
           <CommentContainer comment={comment} onAddComment={onAddComment} />
         </div>
       ))}
